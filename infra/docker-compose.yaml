@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3'
 
 services:
   db:
@@ -8,7 +8,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: rocker9137/api_yamdb
+    image: rocker9137/api_yamdb:latest
     restart: always
     volumes:
       - static_value:/app/static/
