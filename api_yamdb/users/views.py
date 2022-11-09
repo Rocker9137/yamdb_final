@@ -10,14 +10,10 @@ from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.tokens import AccessToken
 
-from .permissions import IsAdmin
-from .serializers import (
-    UserSerializer,
-    ForAdminSerializer,
-    ForUserSerializer,
-    TokenSerializer
-)
 from .models import User
+from .permissions import IsAdmin
+from .serializers import (ForAdminSerializer, ForUserSerializer,
+                          TokenSerializer, UserSerializer)
 
 
 class APISignUp(APIView):
